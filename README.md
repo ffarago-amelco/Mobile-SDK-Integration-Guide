@@ -11,3 +11,4 @@ Please use the following links:
 
  - [Android SDK Integration Guide](https://github.com/optimove-tech/Android-SDK-Integration-Guide)
  - [iOS (Swift/Objective C) SDK Integration Guide](https://github.com/optimove-tech/iOS-SDK-Integration-Guide)
+ - [Unity SDK Integration Guide](https://github.com/optimove-tech/Unity-SDK-Integration-Guide)
