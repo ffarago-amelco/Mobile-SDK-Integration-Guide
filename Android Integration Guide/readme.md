@@ -8,8 +8,8 @@ In this guide we will discuss the steps necessary to implement the Optimove Andr
 3. [Managing environments - during integration only](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/mobile-sdk-general-page-v2.0/Android%20Integration%20Guide/3.%20Managing%20environments.md)
 4. [Tracking screen visits](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/mobile-sdk-general-page-v2.0/Android%20Integration%20Guide/4.%20Tracking%20screen%20visits.md)
 5a. [Customer stitching prerequisite](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/mobile-sdk-general-page-v2.0/Android%20Integration%20Guide/5a.%20Customer%20stitching%20prerequisite.md)
-5b. [Registersing a new customer](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/mobile-sdk-general-page-v2.0/Android%20Integration%20Guide/5b.%20Registering%20a%20new%20customer.md)
-5c. [Recognizing a returning customer](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/mobile-sdk-general-page-v2.0/Android%20Integration%20Guide/5c.%20Recognizing%20a%20returning%20customer.md)
+⋅⋅5b. [Registersing a new customer](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/mobile-sdk-general-page-v2.0/Android%20Integration%20Guide/5b.%20Registering%20a%20new%20customer.md)
+⋅⋅5c. [Recognizing a returning customer](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/mobile-sdk-general-page-v2.0/Android%20Integration%20Guide/5c.%20Recognizing%20a%20returning%20customer.md)
 
 ## Advanced Setup
 6. [Tracking custom events](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/mobile-sdk-general-page-v2.0/Android%20Integration%20Guide/6.%20Tracking%20custom%20events.md)
