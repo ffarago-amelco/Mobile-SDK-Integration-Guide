@@ -3,17 +3,16 @@
 In this guide we will discuss the steps necessary to implement the Optimove Android SDK for your native application. It will go through the following steps necessary to have the basic & advanced SDK ready to track events on your native applicataion. 
 
 ## Basic Setup
-- 1. [Dependencies & Prerequisites](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/mobile-sdk-general-page-v2.0/Android%20Integration%20Guide/1.%20Dependencies%20%26%20Prerequisites.md)
-- 2. [Initializing the SDK](TODO: LINK)
-- 3. [Managing environments - during integration only](TODO: LINK)
-- 4. [Tracking screen visits](TODO: LINK)
-- 5a. [Customer stitching prerequisite](TODO: LINK)
-- 5b. [Registersing a new customer](TODO: LINK)
-- 5c. [Recognizing a returning customer](TODO: LINK)
-- 6. [Testing SDK](TODO: LINK) TODO: not sure if this is relevant yet
+1. [Dependencies & Prerequisites](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/mobile-sdk-general-page-v2.0/Android%20Integration%20Guide/1.%20Dependencies%20%26%20Prerequisites.md)
+2. [Initializing the SDK](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/mobile-sdk-general-page-v2.0/Android%20Integration%20Guide/2.%20Initializing%20the%20SDK.md)
+3. [Managing environments - during integration only](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/mobile-sdk-general-page-v2.0/Android%20Integration%20Guide/3.%20Managing%20environments.md)
+4. [Tracking screen visits](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/mobile-sdk-general-page-v2.0/Android%20Integration%20Guide/4.%20Tracking%20screen%20visits.md)
+5a. [Customer stitching prerequisite](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/mobile-sdk-general-page-v2.0/Android%20Integration%20Guide/5a.%20Customer%20stitching%20prerequisite.md)
+5b. [Registersing a new customer](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/mobile-sdk-general-page-v2.0/Android%20Integration%20Guide/5b.%20Registering%20a%20new%20customer.md)
+5c. [Recognizing a returning customer](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/mobile-sdk-general-page-v2.0/Android%20Integration%20Guide/5c.%20Recognizing%20a%20returning%20customer.md)
 
 ## Advanced Setup
-- 7. [Tracking custom events](TODO: LINK)
+6. [Tracking custom events](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/mobile-sdk-general-page-v2.0/Android%20Integration%20Guide/6.%20Tracking%20custom%20events.md)
 
 ## Executing campaigns
 [SOME LINK](TODO: LINK) TODO: this should be linked to docs/academy?
