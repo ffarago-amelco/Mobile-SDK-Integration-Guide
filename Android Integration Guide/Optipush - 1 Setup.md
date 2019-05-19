@@ -1,4 +1,4 @@
-## Setting up Optipush Deep Linking
+## Optipush setup
 
 In order to route end users back to the application from the notification, you must support *Deep Linking*.
 Other than _UI attributes_, an **_Optipush Notification_** can contain metadata that can lead the user to a specific screen within the hosting application.<br>

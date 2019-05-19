@@ -1,4 +1,4 @@
-## Testing Optipush using API
+## Optipush Testing
  You can test an Optipush template on your device *before* having to create an Optipush campaign by using our Postman Collection TODO: Add collection. This is useful during the integration stage of Optipush.
 
 You can enable/disable _"test Optipush templates"_ on one or more devices by calling the following method:
@@ -36,5 +36,5 @@ public class MainActivity extends AppCompatActivity implements OptimoveSuccessSt
 ```
 
 >**Important Notes:**
-- It is recommended to maintain 2 apps - one with test mode enabled during integration, while the other for production.
-- The app that is published to Google Play should NOT have the test mode enabled.
+>- It is recommended to maintain 2 apps - one with test mode enabled during integration, while the other for production.
+>- The app that is published to Google Play should NOT have the test mode enabled.
