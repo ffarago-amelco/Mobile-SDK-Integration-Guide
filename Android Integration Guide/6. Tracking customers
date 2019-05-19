@@ -1,4 +1,4 @@
-# Registering a new customer
+# Tracking customers
 
 ## When to register a new customer
 - Upon user account creation
@@ -20,6 +20,8 @@ Optimove.getInstance().setUserId("<YOUR_CUSTOMERS_SDK_ID>");
 // Call to notify the SDK that the user has a known PublicCustomerId
 Optimove.getInstance().registerUser("<YOUR_CUSTOMERS_SDK_ID>", "<YOUR_CUSTOMERS_EMAIL_ADDRESS>");
 ```
+
+> **Note:** No need to wait for the SDK to be fully initialized.
 
 ## Encrypted setUserId()
 If you will be sending encrypted userId, please follow the steps in [Reporting encrypted CustomerIDs](https://github.com/optimove-tech/Reporting-Encrypted-CustomerID)
