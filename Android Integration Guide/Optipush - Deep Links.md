@@ -8,10 +8,6 @@ If the **_Main Activity_** (i.e. has `<intent-filter>` with `<action android:nam
 The Activity `android:launchMode="singleInstance"` ensures that if an _Optipush_ notification is open while the _application_ is running (either in the **foreground** or **background**), **_Android_** will not start a new `Task`, nor will it kill the current one, but will call the `onNewIntent(Intent intent)` with the notification's `Intent`.
 
 ```xml
- <intent-filter>
-    <action android:name="android.intent.action.MAIN"/>
-    <category android:name="android.intent.category.LAUNCHER"/>
-</intent-filter>
 <intent-filter>
     <action android:name="android.intent.action.VIEW"/>
 
@@ -43,7 +39,7 @@ The Activity `android:launchMode="singleInstance"` ensures that if an _Optipush_
 ```
 
 ## Optional: Customize Optipush message
-You add icons & color your Optipush message by adding the following meta-data:
+You add icons & color to your Optipush message by adding the following meta-data to `manifest.xml`:
 
 ```xml
 <meta-data
