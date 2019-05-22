@@ -41,3 +41,15 @@ The Activity `android:launchMode="singleInstance"` ensures that if an _Optipush_
         android:scheme="https"/>
 </intent-filter>
 ```
+
+## Optional: Customize Optipush message
+You add icons & color your Optipush message by adding the following meta-data:
+
+```xml
+<meta-data
+    android:name="com.optimove.sdk.custom-notification-icon"
+    android:resource="@drawable/send_icon"/>
+<meta-data
+    android:name="com.optimove.sdk.custom-notification-color"
+    android:resource="@android:color/holo_red_light"/>
+ ```
