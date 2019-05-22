@@ -21,11 +21,7 @@ public class MainActivity extends AppCompatActivity implements OptimoveSuccessSt
     });
   }
 
-  @Override
-  protected void onStop() {
-
-    super.onStop();
-    
+  public void stopTestModeClickListener() {    
     Optimove.getInstance().stopTestMode(success -> {
       if (success) {
         Toast.makeText(this, "Test Mode is OFF", Toast.LENGTH_SHORT).show();
