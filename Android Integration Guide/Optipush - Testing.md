@@ -1,6 +1,8 @@
 ## Optipush Testing
  You can test an Optipush template on your device *before* having to create an Optipush campaign by using our Postman Collection TODO: Add collection. This is useful during the integration stage of Optipush.
 
+TODO: Execute via PostMan and/or Optimove UI
+
 You can enable/disable _"test Optipush templates"_ on one or more devices by calling the following method:
 `Optimove.getInstance().startTestMode(@Nullable SdkOperationListener operationListener);`
 <br> 
