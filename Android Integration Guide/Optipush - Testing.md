@@ -1,4 +1,4 @@
-## Optipush Testing
+## Optipush: Enable Test Mode
  During the integraiton stage, you can test an Optipush push notification in two ways. Either via out Postman colletion and through your Optimove instance.
  For multiple tests during integration, we recommend you use the Postman collection, and once your integration is ready, you can then use the Optimove instance to create an Optipush push notification with the dynamic deep links.
 <br/>

@@ -1,4 +1,4 @@
-## Optipush Enable Deep Linking
+## Optipush: Enable Deep Linking
 Other than _UI attributes_, an **_Optipush Notification_** can contain metadata that can lead the user to a specific screen within the hosting application by using *Deep Linking*.<br>
 
 To support deep linking, update your application's `AndroidManifest.xml` file to reflect which screen can be targeted for HTTP(s) protocol. Each `Activity` that can be targeted must have the following `intent-filter`:
