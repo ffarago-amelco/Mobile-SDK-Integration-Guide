@@ -2,11 +2,12 @@
  During the integraiton stage, you can test an Optipush push notification in two ways. Either via out Postman colletion and through your Optimove instance.
  For multiple tests during integration, we recommend you use the Postman collection, and once your integration is ready, you can then use the Optimove instance to create an Optipush push notification with the dynamic deep links.
 
+## Add startTestMode
  In order to do this, you can enable _"test Optipush templates"_ on one or more devices by calling the following method:
 `Optimove.getInstance().startTestMode(@Nullable SdkOperationListener operationListener);`
 <br> 
 
-### startTestMode code snippet
+### Code snippet example
 ```java
 public class MainActivity extends AppCompatActivity implements OptimoveSuccessStateListener {
 
