@@ -38,14 +38,14 @@ public class MainActivity extends AppCompatActivity implements OptimoveSuccessSt
 >- The app that is published to Google Play should NOT have the test mode enabled.
 <br/>
 
-## Sending Optipush using Postman
+## Sending test Optipush using Postman
 Use this for both iOS & Android testing.
 [Optipush Postman Collection]([![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/8de4eb0e7ec475c3656d)
 
 >- The above `startTestMode` must be implemented in your code for testing using this **Postman collection**
 <br/>
 
-## Sending Optipush using your Optimove instance
+## Sending test Optipush using your Optimove instance
 Stay tuned for our how-to guide 
 
 >- The above `startTestMode` must be implemented in your code for testing Optipush using your **Optimove instance**
