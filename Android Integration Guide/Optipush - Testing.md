@@ -36,18 +36,21 @@ public class MainActivity extends AppCompatActivity implements OptimoveSuccessSt
 
 >- It is recommended to maintain 2 apps - one with test mode enabled during integration, while the other for production.
 >- The app that is published to Google Play should NOT have the test mode enabled.
+>- Please request from the Product Integration to configure a test deep link
 <br/>
 
 ## Test Optipush using Postman
 Use this for both iOS & Android testing. 
-In order to use the Postman collection, please request your unique `[CLIENT_FIREBASE_MESSAGING_SERVER_KEY]` from Optimove Product Integration.
-[Optipush Postman Collection](https://app.getpostman.com/run-collection/8de4eb0e7ec475c3656d)
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/8de4eb0e7ec475c3656d)
 
 >- The above `startTestMode` must be implemented in your code for testing using this **Postman collection**
->- 
+>- In order to use the Postman collection, please request your unique `[CLIENT_FIREBASE_MESSAGING_SERVER_KEY]` from Optimove Product Integration.
+
 <br/>
 
 ## Test Optipush using your Optimove instance
 Stay tuned for our how-to guide 
 
 >- The above `startTestMode` must be implemented in your code for testing Optipush using your **Optimove instance**
+
