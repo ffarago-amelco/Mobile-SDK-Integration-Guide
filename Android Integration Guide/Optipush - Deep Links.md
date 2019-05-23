@@ -1,9 +1,9 @@
-## Optipush Deep Linking
+## Optipush Enable Deep Linking
 Other than _UI attributes_, an **_Optipush Notification_** can contain metadata that can lead the user to a specific screen within the hosting application by using *Deep Linking*.<br>
 
 To support deep linking, update your application's `AndroidManifest.xml` file to reflect which screen can be targeted for HTTP(s) protocol. Each `Activity` that can be targeted must have the following `intent-filter`:
 
-If the **_Main Activity_** (i.e. has `<intent-filter>` with `<action android:name="android.intent.action.MAIN"/>` and `<category android:name="android.intent.category.LAUNCHER"/>`) needs to be targeted by a **_deep link_**, add `android:launchMode="singleInstance"` to the activity's declaration. <br/>
+If the **_Main Activity_** (i.e. has `<intent-filter>` with `<action android:name="android.intent.action.MAIN"/>` and `<category android:name="android.intent.category.LAUNCHER"/>`) needs to be targeted by a **_deep link_**, add `android:launchMode="singleInstance"` to the activity's declaration. <br/><br/>
 The Activity `android:launchMode="singleInstance"` ensures that if an _Optipush_ notification is open while the _application_ is running (either in the **foreground** or **background**), **_Android_** will not start a new `Task`, nor will it kill the current one, but will call the `onNewIntent(Intent intent)` with the notification's `Intent`.
 
 ```xml
