@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity implements OptimoveSuccessSt
 }
 ```
 
->**Important Notes:**
 >- It is recommended to maintain 2 apps - one with test mode enabled during integration, while the other for production.
 >- The app that is published to Google Play should NOT have the test mode enabled.
 
