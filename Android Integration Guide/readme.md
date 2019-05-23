@@ -14,8 +14,8 @@ In this guide we will discuss the steps necessary to implement the Optimove Andr
 7. [Tracking custom events]()
 
 ### Optipush
-[Deep Linking]()
-[Testing]()
+- [Deep Linking]()
+- [Testing]()
 
 ### Executing campaigns using your Optimove instance
 Stay tuned for our how-to guides
