@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements OptimoveSuccessSt
 
 ## Test Optipush using Postman
 Use this for both iOS & Android testing. In order to use the Postman collection, please request your unique `[CLIENT_FIREBASE_MESSAGING_SERVER_KEY]` from Optimove Product Integration.
-[Optipush Postman Collection]([![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/8de4eb0e7ec475c3656d)
+[]([![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/8de4eb0e7ec475c3656d)
 
 >- The above `startTestMode` must be implemented in your code for testing using this **Postman collection**
 <br/>
