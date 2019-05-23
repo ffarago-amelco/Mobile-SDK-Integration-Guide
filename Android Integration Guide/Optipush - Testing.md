@@ -1,10 +1,8 @@
 ## Optipush Testing
- You can test an Optipush template on your device *before* having to create an Optipush campaign by using our Postman Collection TODO: Add collection. This is useful during the integration stage of Optipush.
+ During the integraiton stage, you can test an Optipush push notification in two ways. Either via out Postman colletion and through your Optimove instance.
+ For multiple tests during integration, we recommend you use the Postman collection, and once your integration is ready, you can then use the Optimove instance to create an Optipush push notification with the dynamic deep links.
 
-TODO: Execute via PostMan and/or Optimove UI
-Use this [Optipush Postman Collection]([![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/8de4eb0e7ec475c3656d)) during integration stages only.
-
-You can enable/disable _"test Optipush templates"_ on one or more devices by calling the following method:
+ In order to do this, you can enable _"test Optipush templates"_ on one or more devices by calling the following method:
 `Optimove.getInstance().startTestMode(@Nullable SdkOperationListener operationListener);`
 <br> 
 
@@ -37,3 +35,10 @@ public class MainActivity extends AppCompatActivity implements OptimoveSuccessSt
 >**Important Notes:**
 >- It is recommended to maintain 2 apps - one with test mode enabled during integration, while the other for production.
 >- The app that is published to Google Play should NOT have the test mode enabled.
+
+## Sending Optipush using Postman
+Use this for both iOS & Android testing.
+[Optipush Postman Collection]([![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/8de4eb0e7ec475c3656d)
+
+## Sending Optipush using your Optimove instance
+Stay tuned for our how-to guide 
