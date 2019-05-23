@@ -7,7 +7,7 @@
 `Optimove.getInstance().startTestMode(@Nullable SdkOperationListener operationListener);`
 <br> 
 
-### Code snippet example
+**Code snippet example**
 ```java
 public class MainActivity extends AppCompatActivity implements OptimoveSuccessStateListener {
 
@@ -42,10 +42,10 @@ Use this for both iOS & Android testing.
 [Optipush Postman Collection]([![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/8de4eb0e7ec475c3656d)
 
 >**Important Note:**
->- The above `startTestMode` must be implemented in your code for testing using this Postman collection
+>- The above `startTestMode` must be implemented in your code for testing using this **Postman collection**
 
 ## Sending Optipush using your Optimove instance
 Stay tuned for our how-to guide 
 
 >**Important Note:**
->- The above `startTestMode` must be implemented in your code for testing Optipush using your Optimove instance
+>- The above `startTestMode` must be implemented in your code for testing Optipush using your **Optimove instance**
