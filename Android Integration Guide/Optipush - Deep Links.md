@@ -22,6 +22,48 @@ The Activity `android:launchMode="singleInstance"` ensures that if an _Optipush_
 </intent-filter>
 ```
 
+## Optipush: Handling Dynamic Deep Links from Optimove
+
+To handle **Dynamic Deep Links** the `Activity` that receives the deep links should implement/initialize the `LinkDataExtractedListener` interface. Then, pass the instance of the `LinkDataExtractedListener` and the `Intent` that initialized the `Activity` by using the following code snippet:
+```java
+new DeepLinkHandler(getIntent()).extractLinkData(linkDataExtractedListenerInstance);
+```
+
+If the `Intent` that opened the `Activity` contained an **Optipush Deep Link** then the `onDataExtracted` callback is called with the `screenName` that was targeted and payload's `parameters`.
+
+Example of handling **Dynamic Deep Links**:
+```java
+public class DeepLinkActivity extends AppCompatActivity implements LinkDataExtractedListener {
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_promo);
+
+    // The DeepLinkHandler doesn't hold strong reference to the Activity so this example is safe
+    new DeepLinkHandler(getIntent()).extractLinkData(this);
+  }
+
+  @Override
+  public void onDataExtracted(String screenName, Map<String, String> parameters) {
+    // This is only an example of extracting the data and displaying it to the user
+    TextView outputTv = findViewById(R.id.outputTextView);
+    StringBuilder builder = new StringBuilder(screenName).append(":\n");
+    for (String key : parameters.keySet()) {
+      builder.append(key).append("=").append(parameters.get(key)).append("\n");
+    }
+    outputTv.setText(builder.toString());
+  }
+
+  @Override
+  public void onErrorOccurred(LinkDataError error) {
+    // This callback will also be called if no deep link was found, that's why it's just an INFO level log and not ERROR
+    Log.i("OPTIPUSH_DEEP_LINK", String.format("Failed to get deep link due to: %s", error));
+  }
+}
+```
+
+
 ## Optional: Customize Optipush message
 You add icons & color to your Optipush message by adding the following meta-data to `AndroidManifest.xml`, inside the `<application></application>` tag:
 
