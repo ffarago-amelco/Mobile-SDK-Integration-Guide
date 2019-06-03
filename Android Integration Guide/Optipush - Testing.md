@@ -48,7 +48,6 @@ Click here to get started:
 
  
 ## Test Optipush Using Your Optimove Instance
-Stay tuned for a how-to testing guide.
- 
-> The above `startTestMode` must be implemented in your code for testing Optipush using your **Optimove instance**
- 
+The above `startTestMode` must be implemented in your code for testing Optipush using your **Optimove instance**.
+
+Stay tuned for a complete how-to testing guide.
