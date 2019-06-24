@@ -50,7 +50,7 @@ Use this for both iOS & Android testing.
 <br/>
 
 ## Test Optipush using your Optimove instance
-Stay tuned for our how-to guide 
+[Create Optipush Template - Optimove UI](https://academy.optimove.com/successful-campaigns/create-optipush-template)
 
 >- The above `startTestMode` must be implemented in your code for testing Optipush using your **Optimove instance**
 
