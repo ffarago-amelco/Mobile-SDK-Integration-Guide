@@ -12,15 +12,14 @@ To stop receiving "test campaigns" call `Optimove.sharedInstance.stopTestMode()`
 **Code snippet example**
 TODO: Noy Dont we need an IF statement if success or not? like in android.
 ````swift
-class ViewController: UIViewController 
-{
-    @IBAction func startReceivingOptipushTestNotifications(_ button: UIButton)
-    {
-        Optimove.sharedInstance.startTestMode()
+class ViewController: UIViewController  {
+    
+    @IBAction func startReceivingOptipushTestNotifications(_ button: UIButton) {
+        Optimove.shared.startTestMode()
     }
-    @IBAction func stopReceivingOptipushTestNotifications(_ button: UIButton)
-    {
-        Optimove.sharedInstance.stopTestMode()
+    
+    @IBAction func stopReceivingOptipushTestNotifications(_ button: UIButton) {
+        Optimove.shared.stopTestMode()
     }
 }
 ````
