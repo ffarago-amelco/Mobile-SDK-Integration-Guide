@@ -4,7 +4,7 @@ TODO: need to review the entire page
 ## Notification Service Extension
 
 ### If Notification Service Extension is NOT implemented
-If you already have Notification Service Extension implemented skip this step
+If you already have Notification Service Extension implemented please switch to [the next step](#if-notification-service-extension-is-implemented)
 
 In order to enable Optimove to track the push notifications, you'll need to add a **Notification Extension** to your project.
 A notification service app extension ships as a separate bundle inside your iOS app. To add this extension to your app: 
@@ -57,7 +57,7 @@ In order to enable communication between the extension and the application, add 
 To implement the service's logic open the `NotificationService.swift` file.
 Inside, you'll find 2 callbacks that are defined by iOS:
 
-- `didReceive( request: contentHandler:)` - Called with the content of the push notification
+- `func didReceive(request:contentHandler:)` - Called with the content of the push notification
 - `func serviceExtensionTimeWillExpire()` - Called when the OS is about to _force kill_ the extension's process
 
 Both of these callbacks must be implemented by **your** extension and forwarded to the **Optimove Notification Extension Module**.
@@ -71,21 +71,28 @@ TODO: Noy do we need this bit "NotificationExtensionTenantInfo" ?
 To handle **Dynamic Deep Links** the `OptimoveDeepLinkComponents` Object has a new property called `parameters` to support dynamic parameters when using deep linking.
 
 Example of handling **Dynamic Deep Links**:
-TODO: What about erro handling?
+TODO: What about error handling? ELI: Added placeholder to an error handling.
 TODO: Noy can we give a real example for ios and android how to parse the params - best practice?
 ```swift
 class ViewController: UIViewController, OptimoveDeepLinkCallback {
-    func didReceive(deepLink: OptimoveDeepLinkComponents?)
-    {
-        guard let deepLink = deepLink else {return}
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "deepLinkVc") as? DeepLinkViewController else { return }
 
-        vc.deepLinkComp = deepLink
+    func didReceive(deepLink: OptimoveDeepLinkComponents?) {
+        let deepLinkVC = storyboard?.instantiateViewController(withIdentifier: "deepLinkVc")
+        guard let deepLink = deepLink,
+              let deepLinkVC as? DeepLinkViewController else { 
+              // Here you could handle an error
+              return 
+        }
+        
+        deepLinkVC.deepLinkComp = deepLink
+        
         // Retrieve the targetted screen name
         let screenName = deepLink.screenName
+        
         // Retrieve the deep link Key-Value parameters
         let deepLinkParams = deepLink.parameters
-        present(vc, animated: true)
+        
+        present(deepLinkVC, animated: true)
     }
 }
 ```
