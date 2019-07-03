@@ -14,7 +14,7 @@ In this guide we will discuss the steps necessary to implement the Optimove iOS 
 7. [Tracking custom events](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/mobile-sdk-general-page-v2.0/iOS%20Integration%20Guide/7.%20Tracking%20custom%20events.md)
 
 ### Optipush
-1. [Deep Linking](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/mobile-sdk-general-page-v2.0/iOS%20Integration%20Guide/Optipush%20-%20Deep%20Links.md)
+1. [Setup](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/mobile-sdk-general-page-v2.0/iOS%20Integration%20Guide/Optipush%20-%20Setup.md)
 2. [Testing](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/mobile-sdk-general-page-v2.0/iOS%20Integration%20Guide/Optipush%20-%20Testing.md)
 
 ### Executing campaigns using your Optimove instance
