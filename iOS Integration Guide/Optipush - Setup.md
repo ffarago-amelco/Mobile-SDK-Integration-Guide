@@ -1,35 +1,41 @@
-## Optipush: Enable Deep Linking
-TODO: need to review the entire page
+# Optipush Setup
 
 ## Notification Service Extension
 
-### If Notification Service Extension is NOT implemented
-If you already have Notification Service Extension implemented please switch to [the next step](#if-notification-service-extension-is-implemented)
+### 1. Add `Notification Service Extension` Target
 
-In order to enable Optimove to track the push notifications, you'll need to add a **Notification Extension** to your project.
-A notification service app extension ships as a separate bundle inside your iOS app. To add this extension to your app: 
+> Skip this step if you already have a Notification Service Extension target.
 
-1.  Select File > New > Target in Xcode.
-2.  Select the Notification Service Extension target from the iOS > Application section.
-3.  Click Next.
-4.  Specify a name for your app extension.
-5.  Click Finish.
+In order to enable Optimove to track the push notifications, you'll need to add a `Notification Service Extension` to your project. This app extension creates a process that handles incoming Push Notifications manipulation. To add this extension to your app:
+
+1. Select `File > New > Target` on XCode.
+2. Select the Notification Service Extension target from the `iOS > Application` section.
+3. Click `Next`.
+4. Specify a name for your extension.
+5. Click `Finish`.
 6. In your `Podfile` add a new target matching the extension's name.
 
 **`Podfile` code snippet**
+
 ```ruby
 platform :ios, '10.0'
-target 'My Application' do #Your app target
-  use_frameworks!
-  pod 'OptimoveSDK'
-end
-target 'NotificationExtension' do #Your new extension target
-  use_frameworks!
-end
-``` 
 
-### If Notification Service Extension IS implemented
- In your `Podfile` add to that target `NotificationExtension`, `pod 'OptimoveNotificationServiceExtension`'.
+target 'My Application' do # Your app target
+  use_frameworks!
+  pod 'OptimoveSDK', '~> 2.0' # We've added this dependency in a previous step
+end
+
+target 'NotificationExtension' do # Your new extension target
+  use_frameworks!
+  # Dependencies will be added here
+end
+```
+
+### 2. Add the OptimoveNotificationServiceExtension SDK
+
+1. Open your `Podfile`
+2. Locate the `Notification Service Extension`'s `target` declaration
+3. Adds
 
 **`Podfile` code snippet**
 ```ruby
