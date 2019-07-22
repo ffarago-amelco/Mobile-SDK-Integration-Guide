@@ -1,10 +1,9 @@
 # Optipush Setup
 
-## Receive and Handle Push Notifications
+## Optipush: Receive and Handle Push Notifications
 
-### 1. Add `Notification Service Extension` Target
-
-> Skip this step if you already have a Notification Service Extension target.
+### 1. Optional: Add `Notification Service Extension` Target
+If you already have a Notification Service Extension target, skip this section.
 
 In order to enable Optimove to track the push notifications, you'll need to add a `Notification Service Extension` to your project. This app extension creates a process that handles incoming Push Notifications manipulation. To add this extension to your app:
 
