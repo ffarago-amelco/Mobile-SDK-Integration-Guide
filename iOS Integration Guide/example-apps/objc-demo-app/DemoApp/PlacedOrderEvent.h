@@ -1,10 +1,15 @@
 #import <Foundation/Foundation.h>
+#import "CartItem.h"
 
-import OptimoveSDK;
+@import OptimoveSDK;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PlacedOrderEvent : NSObject
+@interface PlacedOrderEvent : NSObject <OptimoveEvent>
+
+@property NSArray<CartItem *> *_cartItems;
+
+- (instancetype) initWithCartItems:(NSArray *)cartItems;
 
 @end
 

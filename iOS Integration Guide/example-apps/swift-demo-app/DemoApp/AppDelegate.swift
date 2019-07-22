@@ -3,7 +3,7 @@ import UserNotifications
 import OptimoveSDK
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
@@ -41,3 +41,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate {
+ 
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Void) {
+        let isHandledByOptimove = Optimove.shared.didReceive(response: response, withCompletionHandler: completionHandler)
+        if isHandledByOptimove { return }
+        // The notification didn't originate from Optimove's servers, so the app must handle it. Below is the default implementation
+        completionHandler()
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        let isHandledByOptimove = Optimove.shared.willPresent(notification: notification, withCompletionHandler: completionHandler)
+        if isHandledByOptimove { return }
+        // The notification didn't originate from Optimove's servers, so the app must handle it. Below is the default implementation
+        completionHandler([.alert, .badge, .sound])
+    }
+}

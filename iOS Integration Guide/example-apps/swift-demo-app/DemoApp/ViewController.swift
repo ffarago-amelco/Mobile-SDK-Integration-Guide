@@ -34,8 +34,6 @@ extension ViewController: OptimoveSuccessStateListener {
                 // Maybe prompt the user to enable IDFA report
             case .userNotification:
                 // Maybe prompt the user to enable Push Notifications
-            case .internet:
-                // Maybe prompt the user to make sure they have internet connection
             }
         }
         
