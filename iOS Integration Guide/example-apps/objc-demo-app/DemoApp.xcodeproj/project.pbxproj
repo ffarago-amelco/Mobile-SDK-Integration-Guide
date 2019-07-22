@@ -11,9 +11,9 @@
 		67DA320E201598920037089F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67DA31CB201598920037089F /* Assets.xcassets */; };
 		67DA3210201598920037089F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67DA31CD201598920037089F /* LaunchScreen.storyboard */; };
 		67DA3211201598920037089F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67DA31CF201598920037089F /* Main.storyboard */; };
-		67F63ECD225A4A1F00F3B295 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F63ECC225A4A1F00F3B295 /* NotificationService.swift */; };
 		67F63ED1225A4A1F00F3B295 /* NotificationExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 67F63ECA225A4A1F00F3B295 /* NotificationExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		83EEE2797601B44FF822BEC5 /* Pods_NotificationExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C621E15EE1BAEF12AABF28 /* Pods_NotificationExtension.framework */; };
+		AF3B2D6922E61CFC000CE5CB /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3B2D6822E61CFC000CE5CB /* NotificationService.m */; };
 		AF3CA3B022E5AF0500608379 /* CartItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3CA3AF22E5AF0500608379 /* CartItem.m */; };
 		AF3CA3B322E5AFF800608379 /* PlacedOrderEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3CA3B222E5AFF800608379 /* PlacedOrderEvent.m */; };
 		AF3CA3B622E5CADB00608379 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3CA3B522E5CADB00608379 /* AppDelegate.m */; };
@@ -56,12 +56,14 @@
 		67DA31D4201598920037089F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67DA323720159AE10037089F /* DemoApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DemoApp.entitlements; sourceTree = "<group>"; };
 		67F63ECA225A4A1F00F3B295 /* NotificationExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		67F63ECC225A4A1F00F3B295 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		67F63ECE225A4A1F00F3B295 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C40B3A4E969FE69DE488C01 /* Pods-SwiftDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemoApp.debug.xcconfig"; path = "Target Support Files/Pods-SwiftDemoApp/Pods-SwiftDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		949B91A2F2CA78ECFD202979 /* Pods_DemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C2E61F21938784BDD919207 /* Pods-DemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoApp.debug.xcconfig"; path = "Target Support Files/Pods-DemoApp/Pods-DemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		AA3C3ABAAFDA0B280D2040C8 /* Pods-SwiftDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemoApp.release.xcconfig"; path = "Target Support Files/Pods-SwiftDemoApp/Pods-SwiftDemoApp.release.xcconfig"; sourceTree = "<group>"; };
+		AF3B2D6622E61CFC000CE5CB /* NotificationExtension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NotificationExtension-Bridging-Header.h"; sourceTree = "<group>"; };
+		AF3B2D6722E61CFC000CE5CB /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
+		AF3B2D6822E61CFC000CE5CB /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
 		AF3CA3AD22E5AF0500608379 /* DemoApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DemoApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		AF3CA3AE22E5AF0500608379 /* CartItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CartItem.h; sourceTree = "<group>"; };
 		AF3CA3AF22E5AF0500608379 /* CartItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CartItem.m; sourceTree = "<group>"; };
@@ -148,8 +150,10 @@
 			isa = PBXGroup;
 			children = (
 				676FD616226F080300EA17B9 /* NotificationExtension.entitlements */,
-				67F63ECC225A4A1F00F3B295 /* NotificationService.swift */,
 				67F63ECE225A4A1F00F3B295 /* Info.plist */,
+				AF3B2D6722E61CFC000CE5CB /* NotificationService.h */,
+				AF3B2D6822E61CFC000CE5CB /* NotificationService.m */,
+				AF3B2D6622E61CFC000CE5CB /* NotificationExtension-Bridging-Header.h */,
 			);
 			path = NotificationExtension;
 			sourceTree = "<group>";
@@ -237,6 +241,7 @@
 					};
 					67F63EC9225A4A1F00F3B295 = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -372,7 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67F63ECD225A4A1F00F3B295 /* NotificationService.swift in Sources */,
+				AF3B2D6922E61CFC000CE5CB /* NotificationService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,6 +565,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 61AD06AC2FAA7AD9252720F1 /* Pods-NotificationExtension.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
@@ -574,6 +580,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.optimove.sdk.demo.swift.NotificationExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "NotificationExtension/NotificationExtension-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -583,6 +591,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 133F208A0E235C4548904DBA /* Pods-NotificationExtension.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
@@ -596,6 +605,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.optimove.sdk.demo.swift.NotificationExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "NotificationExtension/NotificationExtension-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
