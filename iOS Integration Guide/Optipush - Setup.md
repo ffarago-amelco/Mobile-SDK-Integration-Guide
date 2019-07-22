@@ -140,9 +140,7 @@ class ViewController: UIViewController, OptimoveDeepLinkCallback {
     }
 
     func didReceive(deepLink: OptimoveDeepLinkComponents?) {
-        let deepLinkVC = storyboard?.instantiateViewController(withIdentifier: "deepLinkVc")
-        guard let deepLink = deepLink,
-            let deepLinkVC as? DeepLinkViewController else { 
+        guard let deepLink = deepLink { 
             // Here you could handle an error
             return 
         }
