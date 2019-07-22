@@ -1,0 +1,15 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.0'
+use_frameworks!
+
+target 'DemoApp' do
+  # Make sure that your versions match EXACTLY the Optimove SDK's
+  pod 'FirebaseDynamicLinks', '4.0.0'
+  pod 'FirebaseMessaging', '4.0.2'
+
+  pod 'OptimoveSDK', '~> 2.0'
+end
+
+target 'NotificationExtension' do
+  pod 'OptimoveNotificationServiceExtension', '~> 2.0'
+end
