@@ -18,6 +18,7 @@
 		83EEE2797601B44FF822BEC5 /* Pods_NotificationExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C621E15EE1BAEF12AABF28 /* Pods_NotificationExtension.framework */; };
 		AF3CA3A522E5A12700608379 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CA3A422E5A12700608379 /* CartItem.swift */; };
 		AF3CA3A722E5A17500608379 /* PlacedOrderEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CA3A622E5A17500608379 /* PlacedOrderEvent.swift */; };
+		AF3CA3AB22E5AA5200608379 /* PlacedOrderEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3CA3AA22E5AA5200608379 /* PlacedOrderEvent.m */; };
 		E172C78C0B32A0FE0F98C30A /* Pods_SwiftDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85A5EACD7C3A3D79A431640C /* Pods_SwiftDemoApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,9 @@
 		AA3C3ABAAFDA0B280D2040C8 /* Pods-SwiftDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemoApp.release.xcconfig"; path = "Target Support Files/Pods-SwiftDemoApp/Pods-SwiftDemoApp.release.xcconfig"; sourceTree = "<group>"; };
 		AF3CA3A422E5A12700608379 /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
 		AF3CA3A622E5A17500608379 /* PlacedOrderEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacedOrderEvent.swift; sourceTree = "<group>"; };
+		AF3CA3A822E5AA5100608379 /* SwiftDemoApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftDemoApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		AF3CA3AA22E5AA5200608379 /* PlacedOrderEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlacedOrderEvent.m; sourceTree = "<group>"; };
+		AF3CA3AC22E5AAC800608379 /* PlacedOrderEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacedOrderEvent.h; sourceTree = "<group>"; };
 		B0C621E15EE1BAEF12AABF28 /* Pods_NotificationExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotificationExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -125,12 +129,15 @@
 				67DA31C8201598920037089F /* ViewController.swift */,
 				AF3CA3A422E5A12700608379 /* CartItem.swift */,
 				AF3CA3A622E5A17500608379 /* PlacedOrderEvent.swift */,
+				AF3CA3AC22E5AAC800608379 /* PlacedOrderEvent.h */,
+				AF3CA3AA22E5AA5200608379 /* PlacedOrderEvent.m */,
 				67DA31CB201598920037089F /* Assets.xcassets */,
 				67DA31CD201598920037089F /* LaunchScreen.storyboard */,
 				67DA31CF201598920037089F /* Main.storyboard */,
 				67DA31D2201598920037089F /* AppDelegate.swift */,
 				676FD61D226F526500EA17B9 /* DeepLinkViewController.swift */,
 				67DA31D4201598920037089F /* Info.plist */,
+				AF3CA3A822E5AA5100608379 /* SwiftDemoApp-Bridging-Header.h */,
 			);
 			path = SwiftDemoApp;
 			sourceTree = "<group>";
@@ -210,6 +217,7 @@
 				TargetAttributes = {
 					67DA315A2015918B0037089F = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -351,6 +359,7 @@
 			files = (
 				67DA3213201598920037089F /* AppDelegate.swift in Sources */,
 				AF3CA3A722E5A17500608379 /* PlacedOrderEvent.swift in Sources */,
+				AF3CA3AB22E5AA5200608379 /* PlacedOrderEvent.m in Sources */,
 				67DA320B201598920037089F /* ViewController.swift in Sources */,
 				AF3CA3A522E5A12700608379 /* CartItem.swift in Sources */,
 				676FD61E226F526500EA17B9 /* DeepLinkViewController.swift in Sources */,
@@ -511,6 +520,7 @@
 			baseConfigurationReference = 7C40B3A4E969FE69DE488C01 /* Pods-SwiftDemoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SwiftDemoApp/SwiftDemoApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LDTF4M4FTC;
@@ -518,6 +528,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.optimove.sdk.demo.swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftDemoApp/SwiftDemoApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -528,6 +540,7 @@
 			baseConfigurationReference = AA3C3ABAAFDA0B280D2040C8 /* Pods-SwiftDemoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SwiftDemoApp/SwiftDemoApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LDTF4M4FTC;
@@ -535,6 +548,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.optimove.sdk.demo.swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftDemoApp/SwiftDemoApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
