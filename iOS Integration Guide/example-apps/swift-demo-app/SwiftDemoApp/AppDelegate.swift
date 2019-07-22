@@ -1,5 +1,3 @@
-
-
 import UIKit
 import UserNotifications
 import OptimoveSDK
@@ -11,17 +9,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-
-        let info = OptimoveTenantInfo(tenantToken: "<MY_TENANT_TOKEN>",configName:"<MY_CONFIG_NAME>")
-        
+        // Initialize the Optimove SDK
+        let info = OptimoveTenantInfo(tenantToken: "<YOUR_TENANT_TOKEN>",configName:"<YOUR_CONFIG_NAME>")
         Optimove.configure(for: info)
         
-       UNUserNotificationCenter.current().delegate = self
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.badge,.sound]) { (grant, error) in
-            
-        }
+        // Mandatory Remote Notification Registration
         UIApplication.shared.registerForRemoteNotifications()
+        
+        // Optipush Notification Registration
+        UNUserNotificationCenter.current().delegate = self
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.badge,.sound]) { (grant, error) in
+            // Add your response handling logic here
+        }
         
         return true
     }
@@ -29,11 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                      didReceiveRemoteNotification userInfo: [AnyHashable : Any],
                      fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void)
     {
-        if !Optimove.shared.didReceiveRemoteNotification(userInfo: userInfo,
-                                                                 didComplete: completionHandler) {
-            completionHandler(.newData)
-        }
-        
+        let isHandledByOptimove = Optimove.shared.didReceiveRemoteNotification(userInfo: userInfo, didComplete: completionHandler)
+        if isHandledByOptimove { return }
+        // The remote notification didn't originate from Optimove's servers, so the app must handle it. Below is the default implementation
+        completionHandler(.noData)
     }
     
     func application(_ application: UIApplication,
@@ -41,8 +39,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     {
         Optimove.shared.application(didRegisterForRemoteNotificationsWithDeviceToken: deviceToken)
     }
-    
-    
-    
 }
 
