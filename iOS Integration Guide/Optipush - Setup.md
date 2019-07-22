@@ -74,6 +74,47 @@ Open the **Capabilities** section of your Application's App Target and follow th
 3. The `func didReceive(request:contentHandler:)` callback (Called with the content of the push notification)
 4. The `func serviceExtensionTimeWillExpire()` callback (Called when the OS is about to _force kill_ the extension's process)
 
+Example code snippet:
+
+```swift
+import UserNotifications
+import OptimoveNotificationServiceExtension
+
+class NotificationService: UNNotificationServiceExtension {
+
+  var contentHandler: ((UNNotificationContent) -> Void)?
+  var bestAttemptContent: UNMutableNotificationContent?
+
+  var optimoveNotificationServiceExtension:OptimoveNotificationServiceExtension!
+
+  override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void) {
+    optimoveNotificationServiceExtension = OptimoveNotificationServiceExtension(appBundleId: "<BUNDLE_ID>")
+    if optimoveNotificationServiceExtension.didReceive(request, withContentHandler:  contentHandler) {
+      return
+    }
+    self.contentHandler = contentHandler
+    bestAttemptContent = (request.content.mutableCopy() as? UNMutableNotificationContent)
+
+    if let bestAttemptContent = bestAttemptContent {
+      // Modify the notification content here...
+      bestAttemptContent.title = "\(bestAttemptContent.title) [modified]"
+
+      contentHandler(bestAttemptContent)
+    }
+  }
+    
+  override func serviceExtensionTimeWillExpire() {
+    if optimoveNotificationServiceExtension.isHandledByOptimove {
+      optimoveNotificationServiceExtension.serviceExtensionTimeWillExpire()
+    } else {
+      if let contentHandler = contentHandler, let bestAttemptContent =  bestAttemptContent {
+        contentHandler(bestAttemptContent)
+      }
+    }
+  }
+}
+```
+
 ### 5. UNNotificationCenterDelegate Implementation
 Since the `UNUserNotificationCenter` can only have one delegate at a time, the hosting app should conform to the `UNUserNotificationCenterDelegate` protocol and forward two of its callbacks to the Optimove SDK. Please see code snippet below:
 

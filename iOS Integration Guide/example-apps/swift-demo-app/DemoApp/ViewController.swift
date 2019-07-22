@@ -29,10 +29,9 @@ extension ViewController: OptimoveSuccessStateListener {
         self.isOptimoveInitialized = true
         
         for missingPermission in missingPermissions {
-            switch missingPermission {
-            case .advertisingId:
+            if missingPermission == .advertisingId {
                 // Maybe prompt the user to enable IDFA report
-            case .userNotification:
+            } else if missingPermission == .userNotification {
                 // Maybe prompt the user to enable Push Notifications
             }
         }
