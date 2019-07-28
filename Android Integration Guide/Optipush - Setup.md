@@ -63,7 +63,6 @@ public class DeepLinkActivity extends AppCompatActivity implements LinkDataExtra
 }
 ```
 
-
 ## Optional: Customize Optipush message
 You add icons & color to your Optipush message by adding the following meta-data to `AndroidManifest.xml`, inside the `<application></application>` tag:
 
