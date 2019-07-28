@@ -14,13 +14,8 @@ In this guide we will discuss the steps necessary to implement the Optimove Andr
 7. [Tracking custom events](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/master/Android%20Integration%20Guide/7.%20Tracking%20custom%20events.md)
 
 ### Optipush
-<<<<<<< HEAD
 1. [Setup](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/master/Android%20Integration%20Guide/Optipush%20-%20Setup.md)
-2. [Testing](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/mobile-sdk-general-page-v2.0/Android%20Integration%20Guide/Optipush%20-%20Testing.md)
-=======
-1. [Deep Linking](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/master/Android%20Integration%20Guide/Optipush%20-%20Deep%20Links.md)
 2. [Testing](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/master/Android%20Integration%20Guide/Optipush%20-%20Testing.md)
->>>>>>> ios-version-2
 
 ### Executing campaigns using your Optimove instance
 Stay tuned for our how-to guides
