@@ -93,7 +93,7 @@ class NotificationService: UNNotificationServiceExtension {
   var optimoveNotificationServiceExtension:OptimoveNotificationServiceExtension!
 
   override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void) {
-    optimoveNotificationServiceExtension = OptimoveNotificationServiceExtension(appBundleId: "<BUNDLE_ID>")
+    optimoveNotificationServiceExtension = OptimoveNotificationServiceExtension()
     if optimoveNotificationServiceExtension.didReceive(request, withContentHandler:  contentHandler) {
       return
     }
