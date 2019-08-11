@@ -13,7 +13,7 @@
 
 - (void)didReceiveNotificationRequest:(UNNotificationRequest *)request withContentHandler:(void (^)(UNNotificationContent * _Nonnull))contentHandler {
     
-    self.optimoveNotificationExtenstion = [[OptimoveNotificationServiceExtension alloc] initWithAppBundleId:@"<BUNDLE_ID>"];
+    self.optimoveNotificationExtenstion = [[OptimoveNotificationServiceExtension alloc] init];
     if ([self.optimoveNotificationExtenstion didReceive:request withContentHandler:contentHandler]) {
         // Notification was sent by Optimove servers, the app can ignore it
         return;
