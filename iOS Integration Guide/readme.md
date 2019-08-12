@@ -9,9 +9,10 @@ In this guide we will discuss the steps necessary to implement the Optimove iOS 
 4. [Tracking screen visits](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/master/iOS%20Integration%20Guide/4.%20Tracking%20screen%20visits.md)
 5. [Customer stitching prerequisite](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/master/iOS%20Integration%20Guide/5.%20Customer%20stitching%20prerequisite.md)
 6. [Tracking customers](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/master/iOS%20Integration%20Guide/6.%20Tracking%20customers.md)
+7. [Submitting to the App Store](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/master/iOS%20Integration%20Guide/7.%20Submitting%20to%20the%20App%20Store.md)
 
 ### Advanced Setup
-7. [Tracking custom events](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/master/iOS%20Integration%20Guide/7.%20Tracking%20custom%20events.md)
+8. [Tracking custom events](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/master/iOS%20Integration%20Guide/8.%20Tracking%20custom%20events.md)
 
 ### Optipush
 1. [Setup](https://github.com/optimove-tech/Mobile-SDK-Integration-Guide/blob/master/iOS%20Integration%20Guide/Optipush%20-%20Setup.md)
