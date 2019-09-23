@@ -10,7 +10,7 @@ For multiple tests during integration, we recommend you use the Postman collecti
 
 **Code snippet example**
 ```java
-public class MainActivity extends AppCompatActivity implements OptimoveSuccessStateListener {
+public class MainActivity extends AppCompatActivity {
 
   public void startTestModeClickListener() {
     // Call this method once you verified that the SDK is initialized as described in the "Initializing the SDK" doc

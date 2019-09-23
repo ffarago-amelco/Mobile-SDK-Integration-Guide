@@ -7,41 +7,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Optimove.shared.registerSuccessStateListener(self)
-        
-        // Optipush Only
-        Optimove.shared.register(deepLinkResponder: OptimoveDeepLinkResponder(self))
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        // Make sure to release the reference to the state listener and avoid memory leaks
-        Optimove.shared.unregisterSuccessStateListener(self)
-    }
-}
-
-// MARK: - Optimove SDK Initialization
-
-extension ViewController: OptimoveSuccessStateListener {
-    
-    func optimove(_ optimove: Optimove, didBecomeActiveWithMissingPermissions missingPermissions: [OptimoveDeviceRequirement]) {
-        // Example for how to handle Optimove initialization
-        self.isOptimoveInitialized = true
-        
-        for missingPermission in missingPermissions {
-            if missingPermission == .advertisingId {
-                // Maybe prompt the user to enable IDFA report
-            } else if missingPermission == .userNotification {
-                // Maybe prompt the user to enable Push Notifications
-            }
-        }
-        
-        // Make sure to call the Optimove SDK only after it has been initialized
-        
         // Report screen visit like this
         Optimove.shared.setScreenVisit(screenPath: "Home/Store/Footwear/Boots", screenTitle: "<YOUR_TITLE>", screenCategory: "<OPTIONAL: YOUR_CATEGORY>")
         // OR
         Optimove.shared.setScreenVisit(screenPathArray: ["Home", "Store", "Footwear", "Boots"], screenTitle: "<YOUR_TITLE>", screenCategory: "<OPTIONAL: YOUR_CATEGORY>")
+        
+        // Optipush Only
+        Optimove.shared.register(deepLinkResponder: OptimoveDeepLinkResponder(self))
     }
 }
 

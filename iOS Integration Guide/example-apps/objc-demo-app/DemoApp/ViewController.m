@@ -9,39 +9,14 @@
 
 - (void) viewDidLoad {
     [super viewDidLoad];
-    [Optimove.shared registerSuccessStateDelegate:self];
-    
-    // Optipush Only
-    [Optimove.shared registerWithDeepLinkResponder: [[OptimoveDeepLinkResponder alloc] init: self]];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    // Make sure to release the reference to the state listener and avoid memory leaks
-    [Optimove.shared unregisterSuccessStateDelegate:self];
-}
-
-// MARK: - Optimove SDK Initialization
-
-- (void)optimove:(Optimove *)optimove didBecomeActiveWithMissingPermissions:(NSArray<NSNumber *> *)missingPermissions {
-    // Example for how to handle Optimove initialization
-    self.isOptimoveInitialized = true;
-    
-    for (int i = 0; i < missingPermissions.count; i++) {
-        NSNumber *missingPermission = missingPermissions[i];
-        if (missingPermission == OptimoveDeviceRequirementAdvertisingId) {
-            // Maybe prompt the user to enable IDFA report
-        } else if (missingPermission == OptimoveDeviceRequirementAdvertisingId) {
-            // Maybe prompt the user to enable Push Notifications
-        }
-    }
-    
-    // Make sure to call the Optimove SDK only after it has been initialized
     
     // Report screen visit like this
     [Optimove.shared setScreenVisitWithScreenPath:@"Home/Store/Footwear/Boots" screenTitle:@"<YOUR_TITLE>" screenCategory:@"<OPTIONAL: YOUR_CATEGORY>"];
     // OR
     [Optimove.shared setScreenVisitWithScreenPathArray:@[@"Home", @"Store", @"Footwear", @"Boots"] screenTitle:@"<YOUR_TITLE>" screenCategory:@"<OPTIONAL: YOUR_CATEGORY>"];
+
+    // Optipush Only
+    [Optimove.shared registerWithDeepLinkResponder: [[OptimoveDeepLinkResponder alloc] init: self]];
 }
 
 // Mark - Optimove SDK Indentification
