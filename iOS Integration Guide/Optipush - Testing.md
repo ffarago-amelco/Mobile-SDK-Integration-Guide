@@ -6,19 +6,16 @@ For multiple tests during integration, we recommend you use the Postman collecti
 ## Enable Test Mode
 
 In order to do this, you can enable _"test Optipush templates"_ on one or more devices by calling the following method:
-`Optimove.shared.startTestMode()`
-To stop receiving "test campaigns" call `Optimove.shared.stopTestMode()`.
 
-**Code snippet example**
-
-````swift
+```swift
 Optimove.shared.startTestMode()
 ```
 
-````swift
+To stop receiving "test campaigns" call:
+
+```swift
 Optimove.shared.stopTestMode()
-}
-````
+```
 
 >- It is recommended to maintain 2 apps - one with test mode enabled during integration, while the other for production.
 >- The app that is published to Apple Store should NOT have the test mode enabled.
