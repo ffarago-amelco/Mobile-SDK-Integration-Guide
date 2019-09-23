@@ -4,23 +4,19 @@ During the integration stage, you can test an Optipush push notification in two 
 For multiple tests during integration, we recommend you use the Postman collection, and once your integration is ready, you can then use the Optimove instance to create an Optipush push notification with the dynamic deep links.
 
 ## Enable Test Mode
+
 In order to do this, you can enable _"test Optipush templates"_ on one or more devices by calling the following method:
 `Optimove.shared.startTestMode()`
 To stop receiving "test campaigns" call `Optimove.shared.stopTestMode()`.
 
 **Code snippet example**
+
 ````swift
-class ViewController: UIViewController, OptimoveSuccessStateListener  {
-    
-    func startReceivingOptipushTestNotifications() {
-        // Call this method once you verified that the SDK is initialized as described in the "Initializing the SDK" doc
-        Optimove.shared.startTestMode()
-    }
-    
-    func stopReceivingOptipushTestNotifications() {
-        // Call this method once you verified that the SDK is initialized as described in the "Initializing the SDK" doc
-        Optimove.shared.stopTestMode()
-    }
+Optimove.shared.startTestMode()
+```
+
+````swift
+Optimove.shared.stopTestMode()
 }
 ````
 
@@ -30,7 +26,7 @@ class ViewController: UIViewController, OptimoveSuccessStateListener  {
 
 ## Test Optipush using Postman
 
-Use this for both iOS & Android testing. 
+Use this for both iOS & Android testing.
 
 [![Optipush Postman Collection](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/8de4eb0e7ec475c3656d)
 
