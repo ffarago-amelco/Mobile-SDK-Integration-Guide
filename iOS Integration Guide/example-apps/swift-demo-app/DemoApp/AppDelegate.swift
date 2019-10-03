@@ -9,8 +9,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        //Add this "before" Optimove.configure(for: info) - a must
-        FirebaseApp.configure()
 
         // Initialize the Optimove SDK
         let info = OptimoveTenantInfo(tenantToken: "<YOUR_TENANT_TOKEN>",configName:"<YOUR_CONFIG_NAME>")

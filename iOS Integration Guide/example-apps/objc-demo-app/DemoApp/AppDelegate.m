@@ -44,7 +44,7 @@
 
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
     BOOL isHandledByOptimove = [Optimove.shared didReceiveWithResponse:response withCompletionHandler:completionHandler];
-    if isHandledByOptimove { return; }
+    if (isHandledByOptimove) { return; }
     // The notification didn't originate from Optimove's servers, so the app must handle it. Below is the default implementation
     completionHandler();
 }

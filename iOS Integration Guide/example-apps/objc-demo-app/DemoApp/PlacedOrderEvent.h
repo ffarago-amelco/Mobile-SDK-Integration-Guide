@@ -2,6 +2,7 @@
 #import "CartItem.h"
 
 @import OptimoveSDK;
+@import OptimoveCore;
 
 NS_ASSUME_NONNULL_BEGIN
 

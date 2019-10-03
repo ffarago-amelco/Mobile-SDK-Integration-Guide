@@ -1,5 +1,6 @@
 import Foundation
 import OptimoveSDK
+import OptimoveCore
 
 class PlacedOrderEvent: OptimoveEvent {
     

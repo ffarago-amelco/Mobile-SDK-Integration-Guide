@@ -23,7 +23,7 @@ extension ViewController {
     
     func login(email: String) {
         // Some login logic through which the SDK ID is retrieved
-        let sdkId = MyLoginService.getSdkId(email)
+        let sdkId = "aGVsbG93b3JsZA=="
         
         
         if self.isOptimoveInitialized {

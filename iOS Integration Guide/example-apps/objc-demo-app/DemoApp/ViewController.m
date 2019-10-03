@@ -23,7 +23,7 @@
 
 - (void) loginWithEmail: (NSString *)email {
     // Some login logic through which the SDK ID is retrieved
-    NSString *sdkId = [MyLoginService getSdkIdWithEmail: email];
+    NSString *sdkId = @"aGVsbG93b3JsZA==";
     
     if (self.isOptimoveInitialized) {
         if (sdkId != nil) {
