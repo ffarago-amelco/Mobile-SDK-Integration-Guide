@@ -101,7 +101,23 @@ class NotificationService: UNNotificationServiceExtension {
 }
 ```
 
-### 5. UNNotificationCenterDelegate Implementation
+### 5. Notify Optimove about granted push authorization
+
+To keep Optimove updated with the latest authorization status you should call:
+
+```swift
+func didReceivePushAuthorization(fromUserNotificationCenter: Bool)
+```
+
+Example:
+
+```swift
+UNUserNotificationCenter.current().requestAuthorization(options: options) { (granted, error) in
+  Optimove.shared.didReceivePushAuthorization(fromUserNotificationCenter: granted)
+}
+```
+
+### 6. UNNotificationCenterDelegate Implementation
 
 Since the `UNUserNotificationCenter` can only have one delegate at a time, the hosting app should conform to the `UNUserNotificationCenterDelegate` protocol and forward two of its callbacks to the Optimove SDK. Please see code snippet below:
 
